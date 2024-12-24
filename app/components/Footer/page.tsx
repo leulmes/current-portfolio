@@ -9,8 +9,10 @@ const updateDate = (): number => {
 
 const Footer = () => {
 	return (
-		<div className="text-white flex justify-center h-14 #151312 items-center manrope">
-			<div className="flex flex-row">&copy; {updateDate()} | Leul Mesfin</div>
+		<div className="text-white flex justify-center h-14 #151312 items-center manrope font-kumbh font-light">
+			<div className="flex flex-col items-center justify-center ">
+				<h1>&copy; {updateDate()} | Built by Leul Mesfin 😁</h1>
+			</div>
 		</div>
 	);
 };
