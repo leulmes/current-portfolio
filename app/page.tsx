@@ -29,7 +29,7 @@ export default function Home() {
 					</div>
 					<div className="flex gap-3">
 						<h1 className="text-[#CFC9C9] font-kumbh font-bold text-7xl">
-							I'm
+							I&apos;m
 						</h1>
 						{/* <h1 className="text-[#AAA7A7] font-kumbh font-bold text-7xl">
 							Leul Mesfin
