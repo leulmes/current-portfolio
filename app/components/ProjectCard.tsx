@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardBody, Image, Button, Slider } from "@nextui-org/react";
+import { Card, CardBody, Image, Button } from "@nextui-org/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { ExternalLink } from "lucide-react";
