@@ -9,8 +9,7 @@ type NavLinks = {
 const links: NavLinks[] = [
 	{ name: "Home", href: "#first-section" },
 	{ name: "Experience", href: "#second-section" },
-	{ name: "Projects", href: "#third-section" },
-	{ name: "About", href: "#fourth-section" },
+	{ name: "Projects", href: "#third-section" }
 ];
 
 const Navbar = () => {

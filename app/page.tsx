@@ -107,15 +107,10 @@ export default function Home() {
 				</h1>
 				<div className="flex justify-center gap-4">
 					<ProjectCard />
-          <ProjectCard />
+					<ProjectCard />
 				</div>
 			</div>
 
-			<div id="fourth-section">
-				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
-					About
-				</h1>
-			</div>
 			<Footer />
 		</div>
 	);
