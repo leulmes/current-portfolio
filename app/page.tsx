@@ -2,19 +2,12 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar/page";
 import Footer from "./components/Footer/page";
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faGithub,
-	faInstagram,
-	faLinkedin,
-	faMastodon,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Download } from "lucide-react";
 import Timeline from "./components/Timeline/page";
 import ProjectCard from "./components/ProjectCard";
-
 
 export default function Home() {
 	const phrases = ["Software Engineer", "Coding Instructor"];
@@ -61,7 +54,10 @@ export default function Home() {
 								rel="noopener noreferrer"
 								className="flex items-center hover:text-white "
 							>
-								<FontAwesomeIcon icon={faGithub} className="size-10 cursor-pointer" />
+								<FontAwesomeIcon
+									icon={faGithub}
+									className="size-10 cursor-pointer"
+								/>
 							</Link>
 							<Link
 								href={"https://www.linkedin.com/in/leul-mesfin/"}
@@ -107,9 +103,41 @@ export default function Home() {
 					Projects
 				</h1>
 				<div className="flex flex-col items-center gap-4">
-					<ProjectCard imageSrc={"/panda.jpg"} title={"GAINZ"} languages={['React Native', 'TypeScript', 'Python', 'AWS DynamoDB', 'AWS Lambda', 'Clerk']} description={""} githubLink={"https://github.com/kushaldevv/gainzApp"} />
-					<ProjectCard imageSrc={"/panda.jpg"} title={"Music Transfer"} languages={['Java', 'JavaScript', 'TypeScript', 'Python', 'React', 'Spring Boot', 'JWT Web Token', 'HTML', 'Tailwind CSS']} description={""} githubLink={"https://github.com/leulmes/playlist-transfer"} />
-          <ProjectCard imageSrc={"/panda.jpg"} title={"Mini-Compiler for Bindings"} languages={['Racket', 'x86 Assembly']} description={""} githubLink={"https://github.com/leulmes/"} />
+					<ProjectCard
+						imageSrc={"/gainz.png"}
+						title={"GAINZ"}
+						languages={["React Native", "TypeScript", "Python", "AWS", "Clerk"]}
+						description={
+							"Co-developed a React Native/Expo mobile app for fitness tracking and social networking. Designed a RESTful API on AWS using API Gateway and Lambda functions to manage and process data with DynamoDB. Integrated Clerk for user authentication and built the frontend using TypeScript and Tamagui."
+						}
+						githubLink={"https://github.com/kushaldevv/gainzApp"}
+					/>
+					<ProjectCard
+						imageSrc={"/musicTransfer.png"}
+						title={"Music Transfer"}
+						languages={[
+							"Java",
+							"TypeScript",
+							"Python",
+							"React",
+							"Spring Boot",
+							"JWT Web Token",
+							"Tailwind CSS",
+						]}
+						description={
+							"Built a React web application that transfers Spotify playlists to Apple Music. Constructed a Restful API with Spring Boot to handle authentication and calls to the Spotify Web API. Utilized Java to process Spotify API data into a usable format for the client-side."
+						}
+						githubLink={"https://github.com/leulmes/playlist-transfer"}
+					/>
+					<ProjectCard
+						imageSrc={"/assembly.png"}
+						title={"Mini-Compiler for Bindings"}
+						languages={["Racket", "x86 Assembly"]}
+						description={
+							"Extended a Compiler and assembled an interpreter with binding forms and primitives, that can take any number of arguments. Implemented error checking and mimicked Racket functionality for expressions such as let, let*, cond, case, etc."
+						}
+						githubLink={"https://github.com/leulmes/"}
+					/>
 				</div>
 			</div>
 
