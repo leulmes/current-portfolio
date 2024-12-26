@@ -15,6 +15,7 @@ import { Download } from "lucide-react";
 import Timeline from "./components/Timeline/page";
 import ProjectCard from "./components/ProjectCard";
 
+
 export default function Home() {
 	const phrases = ["Software Engineer", "Coding Instructor"];
 
@@ -53,20 +54,20 @@ export default function Home() {
 						<div className="text-[#CFC9C9] font-kumbh font-normal text-xl">
 							(Passionate Full-Stack Developer)
 						</div>
-						<div className="flex flex-row gap-3 cursor-pointer text-[#CFC9C9] justify-center">
+						<div className="flex flex-row gap-3  text-[#CFC9C9] justify-center">
 							<Link
 								href={"https://github.com/leulmes"}
 								target="_blank"
 								rel="noopener noreferrer"
 								className="flex items-center hover:text-white "
 							>
-								<FontAwesomeIcon icon={faGithub} className="size-10" />
+								<FontAwesomeIcon icon={faGithub} className="size-10 cursor-pointer" />
 							</Link>
 							<Link
 								href={"https://www.linkedin.com/in/leul-mesfin/"}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="flex items-center hover:text-white"
+								className="flex items-center hover:text-white cursor-pointer"
 							>
 								<FontAwesomeIcon icon={faLinkedin} className="size-10" />
 							</Link>
@@ -77,7 +78,7 @@ export default function Home() {
 								rel="noopener noreferrer"
 								className="flex items-center"
 							>
-								<button className="text-base border-2 rounded-3xl border-[#CFC9C9] hover:border-white h-10 px-4 flex items-center gap-2 font-thin">
+								<button className="cursor-pointer text-base border-2 rounded-3xl border-[#CFC9C9] hover:border-white h-10 px-4 flex items-center gap-2 font-thin">
 									Resume
 									<Download className="size-5" />
 								</button>
@@ -105,9 +106,10 @@ export default function Home() {
 				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
 					Projects
 				</h1>
-				<div className="flex justify-center gap-4">
-					<ProjectCard />
-					<ProjectCard />
+				<div className="flex flex-col items-center gap-4">
+					<ProjectCard imageSrc={"/panda.jpg"} title={"GAINZ"} languages={['React Native', 'TypeScript', 'Python', 'AWS DynamoDB', 'AWS Lambda', 'Clerk']} description={""} githubLink={"https://github.com/kushaldevv/gainzApp"} />
+					<ProjectCard imageSrc={"/panda.jpg"} title={"Music Transfer"} languages={['Java', 'JavaScript', 'TypeScript', 'Python', 'React', 'Spring Boot', 'JWT Web Token', 'HTML', 'Tailwind CSS']} description={""} githubLink={"https://github.com/leulmes/playlist-transfer"} />
+          <ProjectCard imageSrc={"/panda.jpg"} title={"Mini-Compiler for Bindings"} languages={['Racket', 'x86 Assembly']} description={""} githubLink={"https://github.com/leulmes/"} />
 				</div>
 			</div>
 

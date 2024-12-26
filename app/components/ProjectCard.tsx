@@ -9,7 +9,15 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 
-export default function ProjectCard() {
+
+interface ProjectCardProps {
+	imageSrc: string;
+	title: string;
+	languages: string[];
+	description: string;
+	githubLink: string;
+}
+export default function ProjectCard({ imageSrc, title, languages, description, githubLink }: ProjectCardProps) {
 	const [liked, setLiked] = React.useState(false);
 
 	return (
@@ -22,32 +30,33 @@ export default function ProjectCard() {
 				<div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center">
 					<div className="relative col-span-6 md:col-span-4">
 						<Image
-							alt="Album cover"
+							alt="Project cover"
 							className="object-cover"
 							height={200}
 							shadow="md"
-							src="https://nextui.org/images/album-cover.png"
+							src={imageSrc}
 							width="100%"
 						/>
 					</div>
 
 					<div className="flex flex-col col-span-6 md:col-span-8">
 						<div className="flex justify-between items-start">
-							<div className="flex flex-col gap-0">
-								<h3 className="font-semibold text-foreground/90">GAINZ</h3>
-								<p className="text-small text-foreground/80">
-									React Native, TypeScript, Python, AWS DynamoDB, AWS Lambda,
-									Clerk
+							<div className="flex flex-col gap-3 font-kumbh">
+								<h3 className="font-semibold">{title}</h3>
+								<p className="text-small ">
+									{languages.join(', ')}
 								</p>
-								<button>Learn More</button>
-								<Link
-									href={"https://github.com/kushaldevv/gainzApp"}
-									target="_blank"
-									rel="noopener noreferrer"
-									className="flex items-center"
-								>
-									<FontAwesomeIcon icon={faGithub} className="size-10" />
-								</Link>
+								<Button color="primary">Learn More</Button>
+								{/* <div>
+									<Link
+										href={githubLink}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="cursor-pointer"
+									>
+										<FontAwesomeIcon icon={faGithub} className="size-10" />
+									</Link>
+								</div> */}
 							</div>
 						</div>
 					</div>
