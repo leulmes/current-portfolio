@@ -84,7 +84,7 @@ export default function Home() {
 				</div>
 				<Image
 					className="rounded-3xl"
-					src="/panda.jpg"
+					src="/nyc.jpg"
 					width={300}
 					height={300}
 					alt="Picture of Leul"
