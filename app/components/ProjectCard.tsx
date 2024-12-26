@@ -1,13 +1,9 @@
 import React from "react";
 import { Card, CardBody, Image, Button, Slider } from "@nextui-org/react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-// 	faGithub,
-// 	faInstagram,
-// 	faLinkedin,
-// 	faMastodon,
-// } from "@fortawesome/free-brands-svg-icons";
-// import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 interface ProjectCardProps {
 	imageSrc: string;
@@ -15,6 +11,7 @@ interface ProjectCardProps {
 	languages: string[];
 	description: string;
 	githubLink: string;
+	demoLink: string;
 }
 export default function ProjectCard({
 	imageSrc,
@@ -22,6 +19,7 @@ export default function ProjectCard({
 	languages,
 	description,
 	githubLink,
+	demoLink,
 }: ProjectCardProps) {
 	return (
 		<Card
@@ -46,10 +44,26 @@ export default function ProjectCard({
 						<p className="text-sm whitespace-nowrap font-kumbh">
 							{languages.join(", ")}
 						</p>
-						<p className="text-sm font-kumbh">
-							{description}
-						</p>
+						<p className="text-sm font-kumbh">{description}</p>
 					</div>
+				</div>
+				<div className="flex justify-center gap-4">
+					<Link
+						href={githubLink}
+						target="_blank"
+						rel="noopener noreferrer"
+						className=""
+					>
+						<Button className="font-kumbh font-medium">
+							Github <FontAwesomeIcon className="size-5" icon={faGithub} />
+						</Button>
+					</Link>
+
+					<Link href={demoLink} target="_blank" rel="noopener noreferrer">
+						<Button className="font-kumbh font-medium">
+							Demo <ExternalLink className="size-5" />
+						</Button>
+					</Link>
 				</div>
 			</CardBody>
 		</Card>

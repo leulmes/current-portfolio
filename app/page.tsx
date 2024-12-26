@@ -111,6 +111,7 @@ export default function Home() {
 							"Co-developed a React Native/Expo mobile app for fitness tracking and social networking. Designed a RESTful API on AWS using API Gateway and Lambda functions to manage and process data with DynamoDB. Integrated Clerk for user authentication and built the frontend using TypeScript and Tamagui."
 						}
 						githubLink={"https://github.com/kushaldevv/gainzApp"}
+            demoLink={'https://www.youtube.com/watch?v=iAC8FYCfB2A'}
 					/>
 					<ProjectCard
 						imageSrc={"/musicTransfer.png"}
@@ -128,6 +129,7 @@ export default function Home() {
 							"Built a React web application that transfers Spotify playlists to Apple Music. Constructed a Restful API with Spring Boot to handle authentication and calls to the Spotify Web API. Utilized Java to process Spotify API data into a usable format for the client-side."
 						}
 						githubLink={"https://github.com/leulmes/playlist-transfer"}
+            demoLink={'https://www.youtube.com/watch?v=wukNB-JNbXw'}
 					/>
 					<ProjectCard
 						imageSrc={"/assembly.png"}
@@ -137,6 +139,7 @@ export default function Home() {
 							"Extended a Compiler and assembled an interpreter with binding forms and primitives, that can take any number of arguments. Implemented error checking and mimicked Racket functionality for expressions such as let, let*, cond, case, etc."
 						}
 						githubLink={"https://github.com/leulmes/"}
+            demoLink={"https://github.com/leulmes/"}
 					/>
 				</div>
 			</div>
