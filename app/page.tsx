@@ -13,6 +13,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Download } from "lucide-react";
 import Timeline from "./components/Timeline/page";
+import ProjectCard from "./components/ProjectCard";
 
 export default function Home() {
 	const phrases = ["Software Engineer", "Coding Instructor"];
@@ -39,7 +40,7 @@ export default function Home() {
 						{/* <h1 className="text-[#AAA7A7] font-kumbh font-bold text-7xl">
 							Leul Mesfin
 						</h1> */}
-            <h1 className="to-accent bg-gradient-to-bl from-[#AAA7A7] bg-clip-text font-bold text-7xl text-transparent">
+						<h1 className="to-accent bg-gradient-to-bl from-[#AAA7A7] bg-clip-text font-bold text-7xl text-transparent">
 							Leul Mesfin
 						</h1>
 					</div>
@@ -49,7 +50,9 @@ export default function Home() {
 						{/* <span id="cursor" className="text-white animate-blink">
 							|
 						</span> */}
-            <div className="text-[#CFC9C9] font-kumbh font-normal text-xl">(Passionate Full-Stack Developer)</div>
+						<div className="text-[#CFC9C9] font-kumbh font-normal text-xl">
+							(Passionate Full-Stack Developer)
+						</div>
 						<div className="flex flex-row gap-3 cursor-pointer text-[#CFC9C9] justify-center">
 							<Link
 								href={"https://github.com/leulmes"}
@@ -91,20 +94,28 @@ export default function Home() {
 				/>
 			</div>
 
-      <div id='second-section'>
-        <h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">Experience</h1>
-        <Timeline />
-      </div>
-			
-      <div id='third-section'>
-        <h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">Projects</h1>
-        
-      </div>
+			<div id="second-section">
+				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
+					Experience
+				</h1>
+				<Timeline />
+			</div>
 
-      <div id='fourth-section'>
-        <h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">About</h1>
-        
-      </div>
+			<div id="third-section">
+				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
+					Projects
+				</h1>
+				<div className="flex justify-center gap-4">
+					<ProjectCard />
+          <ProjectCard />
+				</div>
+			</div>
+
+			<div id="fourth-section">
+				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
+					About
+				</h1>
+			</div>
 			<Footer />
 		</div>
 	);

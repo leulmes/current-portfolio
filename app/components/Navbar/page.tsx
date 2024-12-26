@@ -1,12 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faGithub,
-	faInstagram,
-	faLinkedin,
-	faMastodon,
-} from "@fortawesome/free-brands-svg-icons";
 
 type NavLinks = {
 	name: string;

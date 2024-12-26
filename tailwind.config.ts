@@ -1,12 +1,14 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 export default {
     darkMode: ["class"],
-    content: [
-		"./pages/**/*.{js,ts,jsx,tsx,mdx}",
-		"./components/**/*.{js,ts,jsx,tsx,mdx}",
-		"./app/**/*.{js,ts,jsx,tsx,mdx}",
-	],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/components/(card|chip|ripple).js"
+  ],
 	theme: {
     	extend: {
     		keyframes: {
@@ -76,5 +78,5 @@ export default {
     		}
     	}
     },
-	plugins: [require("tailwindcss-animate"), require('daisyui')],
+  plugins: [require("tailwindcss-animate"),require('daisyui'),nextui()],
 } satisfies Config;
