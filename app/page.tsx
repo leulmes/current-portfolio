@@ -18,7 +18,7 @@ export default function Home() {
 
 			<div
 				id="first-section"
-				className="h-screen flex items-center justify-center flex-row gap-14"
+				className="h-screen flex items-center justify-center gap-14"
 			>
 				<div className="flex flex-col">
 					<div className="flex gap-2">
@@ -92,14 +92,14 @@ export default function Home() {
 			</div>
 
 			<div id="second-section">
-				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
+				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10 pt-14">
 					Experience
 				</h1>
 				<Timeline />
 			</div>
 
 			<div id="third-section">
-				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10">
+				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10 pt-14">
 					Projects
 				</h1>
 				<div className="flex flex-col items-center gap-4">
