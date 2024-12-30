@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Navbar from "./components/Navbar/page";
 import Footer from "./components/Footer/page";
@@ -8,6 +7,7 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { Download } from "lucide-react";
 import Timeline from "./components/Timeline/page";
 import ProjectCard from "./components/ProjectCard";
+import ProfileCard from "./components/ProfileCard";
 
 export default function Home() {
 	// const phrases = ["Software Engineer", "Coding Instructor"];
@@ -18,14 +18,14 @@ export default function Home() {
 
 			<div
 				id="first-section"
-				className="h-screen flex items-center justify-center gap-14"
+				className="h-screen flex items-center justify-center desktop:flex desktop:items-center desktop:justify-center desktop:gap-14"
 			>
-				<div className="flex flex-col">
-					<div className="flex gap-2">
-						<h1 className="text-[#CFC9C9] font-kumbh font-normal text-[32px]">
+				<div className="hidden desktop:flex desktop:flex-col">
+					<div className="desktop:flex desktop:gap-2">
+						<h1 className="text-[#CFC9C9] font-kumbh font-normal desktop:text-[32px]">
 							Selam
 						</h1>
-						<h1 className="font-normal text-[32px]">👋🏾</h1>
+						<h1 className="font-normal desktop:text-[32px]">👋🏾</h1>
 					</div>
 					<div className="flex gap-3">
 						<h1 className="text-[#CFC9C9] font-kumbh font-bold text-7xl">
@@ -83,22 +83,25 @@ export default function Home() {
 					</h1>
 				</div>
 				<Image
-					className="rounded-3xl"
+					className="rounded-3xl hidden desktop:flex"
 					src="/nyc.JPG"
 					width={300}
 					height={300}
 					alt="Picture of Leul"
 				/>
+				<div className="desktop:hidden">
+					<ProfileCard />
+				</div>
 			</div>
 
-			<div id="second-section">
+			<div id="second-section" className="hidden display:flex display:flex-col">
 				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10 pt-14">
 					Experience
 				</h1>
 				<Timeline />
 			</div>
 
-			<div id="third-section">
+			<div id="third-section" className="hidden display:flex display:flex-col">
 				<h1 className="text-white font-kumbh font-bold text-7xl flex justify-center mb-10 pt-14">
 					Projects
 				</h1>
